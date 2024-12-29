@@ -55,7 +55,7 @@ userRoutes.post("/VerifyToken", async (req, res) => {
       return res.status(200).json({ msg: "JWT must be provided" });
     }
     try {
-      const userInfo = jwt.verify(token,process.env.SECRET_KEY);
+      const userInfo = jwt.verify(token,"kst");
       return res.status(200).json(userInfo);
     } catch (error) {
       return res.status(500).json({ msg: error });

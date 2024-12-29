@@ -59,7 +59,7 @@ const Register = () => {
       const imgUrl=await getUrl(userProfile);
       const pdfUrl=await getUrl(userProof);
       const res = await axios.post(
-        "http://localhost:9600/users/register",
+        "https://kst-project.vercel.app/users/register",
         {userProfile:imgUrl,userResume:pdfUrl,userName,userDob,userGender,userMail}
       );
       alert(res.data.msg);

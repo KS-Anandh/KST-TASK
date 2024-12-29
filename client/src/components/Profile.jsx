@@ -13,7 +13,7 @@ const Profile = () => {
       const token =localStorage.getItem("token");
       if(token){
         try{
-          const res=await axios.post("http://localhost:9600/users/verifyToken",{token})
+          const res=await axios.post("https://kst-project.vercel.app/users/verifyToken",{token})
           setUserData(res.data)
         }
         catch(err){

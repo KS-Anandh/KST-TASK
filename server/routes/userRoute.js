@@ -41,7 +41,7 @@ userRoutes.post("/login",async(req,res)=>{
             userResume:user.userResume,
             userName:user.userName
         }
-        const token=jwt.sign(payload,process.env.SECRET_KEY);
+        const token=jwt.sign(payload,"kst");
         token ?res.status(200).json({token:token,msg:"Login Success"}) :res.status(400).json({msg:"token not created"})
     }
     catch(error){

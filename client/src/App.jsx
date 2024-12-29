@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Login from './components/Login'
 import Register from './components/Register'
-import Profile from './components/profile'
+import Profile from './components/Profile'
 const App = () => {
 
   

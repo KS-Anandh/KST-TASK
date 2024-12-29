@@ -18,7 +18,7 @@ const Login = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:9600/users/login", {
+      const res = await axios.post("https://kst-project.vercel.app/users/login", {
         userMail,
         userPassword,
       });
